@@ -2,27 +2,31 @@ async function startGame() {
   const response = await fetch(`https://api.scryfall.com/cards/random`);
   const card = await response.json();
 
-  const words = card.name + card.mana_cost + card.type_line + card.oracle_text;
-  const secretWord = words.toUpperCase().replace(/[^A-Z]/g, ''); // only letters
+  const words = card.name + ' ' + card.mana_cost + ' ' + card.type_line + ' ' + card.oracle_text;
+  const secretWord = words.toUpperCase();
 
   const wordDiv = document.getElementById('word');
   const wrongLetters = document.getElementById('wrongLetters');
   const input = document.getElementById('guessInput');
 
-  let revealed = Array(secretWord.length).fill('');
+  let revealed = [...secretWord].map(c => (c === ' ' ? ' ' : ''));
   let guessed = [];
   let wrong = [];
 
   function drawWord() {
     wordDiv.innerHTML = revealed
-      .map(letter => `<span class="letter">${letter || '&nbsp;'}</span>`)
+      .map(letter =>
+        letter === ' '
+          ? `<span class="letter">&nbsp;</span>`
+          : `<span class="letter">${letter || '&nbsp;'}</span>`
+      )
       .join('');
   }
 
   window.makeGuess = function () {
     const guess = input.value.toUpperCase();
     input.value = '';
-    if (!guess.match(/[A-Z]/) || guess.length !== 1 || guessed.includes(guess)) return;
+    if (!guess.match(/^[A-Z0-9{}\/:\-]$/) || guessed.includes(guess)) return;
 
     guessed.push(guess);
 
