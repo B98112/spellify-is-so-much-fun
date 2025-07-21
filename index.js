@@ -1,6 +1,7 @@
+
 fetchCard = async (e) => {
   // Getting the Scryfall data.
-  const response = await fetch(`https://api.scryfall.com/cards/random?q-t=basic`);
+  const response = await fetch(`https://api.scryfall.com/cards/random?q-t=basic lang=en`);
   const card = await response.json();
 
   // Updating the card with the image data.
