@@ -14,14 +14,14 @@ async function startGame() {
   let wrong = [];
 
   function drawWord() {
-    wordDiv.innerHTML = revealed
-      .map(letter =>
-        letter === ' '
-          ? `<span class="letter">&nbsp;</span>`
-          : `<span class="letter">${letter || '&nbsp;'}</span>`
-      )
-      .join('');
-  }
+  wordDiv.innerHTML = revealed
+    .map(letter =>
+      letter === ' '
+        ? `<span class="space">&nbsp;</span>`
+        : `<span class="letter">${letter || '&nbsp;'}</span>`
+    )
+    .join('');
+}
 
   window.makeGuess = function () {
     const guess = input.value.toUpperCase();
