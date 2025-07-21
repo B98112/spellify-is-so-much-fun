@@ -30,11 +30,7 @@ body {
   position: absolute;
   width: 240px;
 }
-#name {
-  font-size: 40px;
-  width: 30vw
-}
-#oracle, #typeLine {
+#oracle, #typeLine, #name, #mana {
   width:50vw;
   padding-top: 10px;
 }

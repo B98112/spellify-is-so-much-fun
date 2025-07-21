@@ -8,8 +8,10 @@ fetchCard = async (e) => {
   const oraTextEl = document.getElementById('oracle');
   const nameEl = document.getElementById('cardName');
   const typeEl = document.getElementById('typeLine');
+  const manaEl = document.getElementById('mana');
   imageEl.src = card.image_uris.normal;
   oraTextEl.innerText = card.oracle_text;
   nameEl.innerText = card.name;
   typeEl.innerText = card.type_line;
+  typeEl.innerText = card.cmc;
 }
