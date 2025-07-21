@@ -29,3 +29,7 @@ body {
   position: absolute;
   width: 240px;
 }
+#name {
+  margin: auto;
+  font-size: 40px;
+}
