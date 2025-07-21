@@ -13,5 +13,5 @@ fetchCard = async (e) => {
   oraTextEl.innerText = card.oracle_text;
   nameEl.innerText = card.name;
   typeEl.innerText = card.type_line;
-  typeEl.innerText = card.cmc;
+  typeEl.innerText = card.mana_cost;
 }
