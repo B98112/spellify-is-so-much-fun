@@ -5,7 +5,7 @@ fetchCard = async (e) => {
 
   // Updating the card with the image data.
   const imageEl = document.getElementById('card');
-  const cmcEl = document.getElementById('cmc');
+  const oraTextEl = document.getElementById('oracle');
   imageEl.src = card.image_uris.normal;
-  cmcEl.innerText = card.oracle_text;
+  oraTextEl.innerText = card.oracle_text;
 }
