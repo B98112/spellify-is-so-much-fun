@@ -7,5 +7,5 @@ fetchCard = async (e) => {
   const imageEl = document.getElementById('card');
   const cmcEl = document.getElementById('cmc');
   imageEl.src = card.image_uris.normal;
-  cmcEl.src = card.cmc.normal;
+  cmcEl.src = card.cmc;
 }
