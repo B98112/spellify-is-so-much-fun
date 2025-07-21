@@ -20,6 +20,7 @@ body {
   cursor: pointer;
   margin-top: 450px;
   padding: 10px;
+  padding-top: 50px;
 }
 
 #card {
