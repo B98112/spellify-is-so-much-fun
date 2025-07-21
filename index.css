@@ -7,11 +7,6 @@
 body {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
   background: linear-gradient(45deg, #1A1A1D, #5D5D60);
 }
 
@@ -19,15 +14,13 @@ body {
   box-shadow: 0 10px 10px #000;
   cursor: pointer;
   margin-top: 450px;
-  padding: 10px;
-  padding-top: 50px;
+  padding: 30px;
 }
 
 #card {
   border-radius: 12px;
   box-shadow: 0 10px 10px black;
   height: 336px;
-  position: absolute;
   width: 240px;
 }
 #oracle, #typeLine, #name, #mana {
