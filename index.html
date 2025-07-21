@@ -3,15 +3,22 @@
   <head>
     <link rel="stylesheet" href="index.css">
   </head>
+  <title>Hangman Game</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 2rem; }
+    .letter {
+      display: inline-block;
+      width: 30px;
+      font-size: 24px;
+      border-bottom: 2px solid black;
+      margin: 5px;
+    }
+    .wrong { color: red; }
+  </style>
   <body onload="fetchCard();">
-    <img id="card">
-    <button id="button" onclick="fetchCard();">Get A Random Card</button>
-    <br>
-    <span id="cardName">hi</span>
-    <span id="mana">hi</span>
-    <br>
-    <div id="typeLine">hi</div>
-    <div id="oracle">hi</div>
-    <script type="text/javascript" src="index.js"></script>
+    <div id="word"></div>
+    <input id="guessInput" maxlength="1" autofocus />
+    <button onclick="makeGuess()">Guess</button>
+    <p>Wrong guesses: <span id="wrongLetters"></span></p>
   </body>
 </html>
