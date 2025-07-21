@@ -30,11 +30,9 @@ body {
   width: 240px;
 }
 #name {
-  margin: auto;
   font-size: 40px;
   width: 30vw
 }
 #oracle {
-  margin:auto;
   width:50vw;
 }
